@@ -1,0 +1,6 @@
+1. Dymkou S. Optimal control processes. Integral Equations and Operator Theory. 2008;60:201–216.
+2. Yosida K. Functional analysis. Berlin: Springer-Verlag; 1965. XI, 458 p.
+3. Shevlyakov G. Stream data preprocessing. In: Proceeding Association (FRUCT) (Yaroslavl, Russia). : IEEE; 2020. , 402–407.
+4. Mikhasev GI. Equivalent single layer cylindrical shells. In: Thin-walled laminated structures. Cham: Springer; 2019. 106, 29–84.
+5. Deitrich CJ. On botnets that use DNS for command and control. In: 7 th European Conference on Computer Network Defense (Gotheburg, Sweden). Piscataway: IEEE; 2011. , 9–16. DOI: 10.1109/EC2ND.2011.16.
+6. Васильев АФ. О решетках подгрупп конечных групп. В: Бесконечные группы и примыкающие алгебраические структуры. Киев: Институт математики АН Украины; 1993. , 27–54.

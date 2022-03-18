@@ -1,0 +1,61 @@
+\begin{thebibliography}{99}
+
+	\RBibitem{1}
+	\by S.\ ~Dymkou
+	\paper Optimal control processes
+	\jour Integral Equations and Operator Theory
+	\yr 2008
+	\vol 60
+	\pages 201--216
+	
+	\RBibitem{2}
+	\by K.\ ~Yosida
+	\book Functional analysis
+	\publaddr Berlin
+	\publ  Springer-Verlag
+	\yr  1965
+	\vol XI
+	\pages 458
+	
+	\RBibitem{3}
+	\by G.\ ~Shevlyakov
+	\book Stream data preprocessing
+	\jour Proceeding Association (FRUCT) (Yaroslavl, Russia)
+	\publaddr 
+	\publ  IEEE
+	\yr  2020
+	\vol 
+	\pages 402--407
+	
+	\RBibitem{4}
+	\by G.\,I. ~Mikhasev
+	\book Equivalent single layer cylindrical shells
+	\jour Thin-walled laminated structures
+	\publaddr Cham
+	\publ  Springer
+	\yr  2019
+	\vol 106
+	\pages 29--84
+	
+	\RBibitem{5}
+	\by C.\,J. ~Deitrich
+	\book On botnets that use DNS for command and control
+	\jour 7 th European Conference on Computer Network Defense (Gotheburg, Sweden)
+	\publaddr Piscataway
+	\publ  IEEE
+	\yr  2011
+	\vol 
+	\pages 9--16
+	\crossref{http://dx.doi.org/10.1109/EC2ND.2011.16}
+	
+	\RBibitem{6}
+	\by А.\,Ф. ~Васильев
+	\book О решетках подгрупп конечных групп
+	\jour Бесконечные группы и примыкающие алгебраические структуры
+	\publaddr Киев
+	\publ  Институт математики АН Украины
+	\yr  1993
+	\vol 
+	\pages 27--54
+	
+\end{thebibliography}
