@@ -1,6 +1,8 @@
-1. Dymkou S. Optimal control processes. Integral Equations and Operator Theory. 2008;60:201–216.
-2. Yosida K. Functional analysis. Berlin: Springer-Verlag; 1965. XI, 458 p.
-3. Shevlyakov G. Stream data preprocessing. In: Proceeding Association (FRUCT) (Yaroslavl, Russia). : IEEE; 2020. , 402–407.
-4. Mikhasev GI. Equivalent single layer cylindrical shells. In: Thin-walled laminated structures. Cham: Springer; 2019. 106, 29–84.
-5. Deitrich CJ. On botnets that use DNS for command and control. In: 7 th European Conference on Computer Network Defense (Gotheburg, Sweden). Piscataway: IEEE; 2011. , 9–16. DOI: 10.1109/EC2ND.2011.16.
-6. Васильев АФ. О решетках подгрупп конечных групп. В: Бесконечные группы и примыкающие алгебраические структуры. Киев: Институт математики АН Украины; 1993. , 27–54.
+1. Ивлев ДД. О двойных числах и их функциях. В: Математическое просвещение: Серия: Математика, ее преподавание, приложения и история. Москва: Государственное издательство физико-математической литературы; 1961. 6, 197–203.
+2. Розенфельд БА. Неевклидовы геометрии. Москва: Государственное издательство технико-теоретической литературы; 1955. , 744 с.
+3. Khrennikov A. Hyperbolic quantum mechanics. Advances in Applied Clifford Algebras. 2003;13(1):1–9. DOI: 10.1007/s00006-003-0001-1.
+4. Khrennikov A. An introduction to hyperbolic analysis. ARXIV. 2005;:42. DOI: https://arxiv.org/abs/math-ph/0507053v2.
+5. Зверович ЭИ, Павловский ВА. Нахождение областей сходимости и вычисление сумм степенных рядов от h-комплексного переменного. Известия Национальной академии наук Беларуси: Серия физико-математических наук. 2020;56(2):189–193. DOI: 10.29235/1561-2430-2020-56-2-189-193.
+6. Павловский ВА. Алгебраические уравнения с вещественными коэффициентами в кольце h-комплексных чисел. Весці БДПУ: Фізіка: Матэматыка: Інфарматыка: Біялогія: Геаграфія. 2020;4:25–31.
+7. Pavlovsky VA, Vasiliev IL. On h-holomorphy and h-analyticity of functions of an h-complex variable. Bulletin of Gumilyov LN Eurasian National University: Mathematics: Computer Science: Mechanics Series. 2020;4:19–27. DOI: 10.32523/2616-7182/2020-133-4-19-27.
+8. Шабат БВ. Введение в комплексный анализ; Часть 1; Функции одного переменного. Москва: Ленанд; 2015. 5, 336 с.

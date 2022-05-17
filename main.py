@@ -17,7 +17,7 @@ def main():
             year = info[2]
             other = line[4][1:].replace(",", ".").split('.')          
             vol = other[0]
-            pages = other[1][1:].replace(" p", "")
+            pages = other[1][1:].replace(" p", "").replace(" с", "")
             with open("/home/vladaf/Документы/Python/References/static/output.txt", "a") as file:
                 file.write(
                     f"\n\t\\RBibitem{{{rbibitem}}}\n\t"
@@ -58,14 +58,14 @@ def main():
                 file.close()
         elif line[3].find("В:")>=0 or line[3].find("In:")>=0:
             book = line[2][1:].replace(";", ".")
-            jour = line[3][1:].replace("В: ", "").replace("In: ", "")
+            jour = line[3][1:].replace("В: ", "").replace("In: ", "").replace(":", ".")
             info = line[4][1:].replace(":", ".").replace(";", ".").split('.')
             publaddr = info[0]
             publ = info[1]
             year = info[2]
             other = line[5][1:].replace(",", ".").split('.')          
             vol = other[0]
-            pages = other[1][1:].replace(" p", "")
+            pages = other[1][1:].replace(" p", "").replace(" с", "")
             with open("/home/vladaf/Документы/Python/References/static/output.txt", "a") as file:
                 file.write(
                     f"\n\t\\RBibitem{{{rbibitem}}}\n\t"
@@ -107,7 +107,7 @@ def main():
                 file.close()
         else:
             paper = line[2][1:].replace(";", ".")
-            jour = line[3][1:]
+            jour = line[3][1:].replace(":", ".")
             other = line[4][1:].replace(":", ".").replace(";", ".").split('.')
             year = other[0]
             vol = other[1]

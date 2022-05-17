@@ -1,61 +1,75 @@
 \begin{thebibliography}{99}
 
 	\RBibitem{1}
-	\by S.\ ~Dymkou
-	\paper Optimal control processes
-	\jour Integral Equations and Operator Theory
-	\yr 2008
-	\vol 60
-	\pages 201--216
+	\by Д.\,Д. ~Ивлев
+	\book О двойных числах и их функциях
+	\jour Математическое просвещение. Серия. Математика, ее преподавание, приложения и история
+	\publaddr Москва
+	\publ  Государственное издательство физико-математической литературы
+	\yr  1961
+	\vol 6
+	\pages 197--203
 	
 	\RBibitem{2}
-	\by K.\ ~Yosida
-	\book Functional analysis
-	\publaddr Berlin
-	\publ  Springer-Verlag
-	\yr  1965
-	\vol XI
-	\pages 458
+	\by Б.\,А. ~Розенфельд
+	\book Неевклидовы геометрии
+	\publaddr Москва
+	\publ  Государственное издательство технико-теоретической литературы
+	\yr  1955
+	\vol 
+	\pages 744
 	
 	\RBibitem{3}
-	\by G.\ ~Shevlyakov
-	\book Stream data preprocessing
-	\jour Proceeding Association (FRUCT) (Yaroslavl, Russia)
-	\publaddr 
-	\publ  IEEE
-	\yr  2020
-	\vol 
-	\pages 402--407
+	\by A.\ ~Khrennikov
+	\paper Hyperbolic quantum mechanics
+	\jour Advances in Applied Clifford Algebras
+	\yr 2003
+	\vol 13(1)
+	\pages 1--9
+	\crossref{http://dx.doi.org/10.1007/s00006-003-0001-1}
 	
 	\RBibitem{4}
-	\by G.\,I. ~Mikhasev
-	\book Equivalent single layer cylindrical shells
-	\jour Thin-walled laminated structures
-	\publaddr Cham
-	\publ  Springer
-	\yr  2019
-	\vol 106
-	\pages 29--84
+	\by A.\ ~Khrennikov
+	\paper An introduction to hyperbolic analysis
+	\jour ARXIV
+	\yr 2005
+	\vol 
+	\pages 42
+	\crossref{http://dx.doi.org/https://arxiv.org/abs/math-ph/0507053v2}
 	
 	\RBibitem{5}
-	\by C.\,J. ~Deitrich
-	\book On botnets that use DNS for command and control
-	\jour 7 th European Conference on Computer Network Defense (Gotheburg, Sweden)
-	\publaddr Piscataway
-	\publ  IEEE
-	\yr  2011
-	\vol 
-	\pages 9--16
-	\crossref{http://dx.doi.org/10.1109/EC2ND.2011.16}
+	\by Э.\,И. ~Зверович, В.\,А. ~Павловский
+	\paper Нахождение областей сходимости и вычисление сумм степенных рядов от h-комплексного переменного
+	\jour Известия Национальной академии наук Беларуси. Серия физико-математических наук
+	\yr 2020
+	\vol 56(2)
+	\pages 189--193
+	\crossref{http://dx.doi.org/10.29235/1561-2430-2020-56-2-189-193}
 	
 	\RBibitem{6}
-	\by А.\,Ф. ~Васильев
-	\book О решетках подгрупп конечных групп
-	\jour Бесконечные группы и примыкающие алгебраические структуры
-	\publaddr Киев
-	\publ  Институт математики АН Украины
-	\yr  1993
-	\vol 
-	\pages 27--54
+	\by В.\,А. ~Павловский
+	\paper Алгебраические уравнения с вещественными коэффициентами в кольце h-комплексных чисел
+	\jour Весці БДПУ. Фізіка. Матэматыка. Інфарматыка. Біялогія. Геаграфія
+	\yr 2020
+	\vol 4
+	\pages 25--31
+	
+	\RBibitem{7}
+	\by V.\,A. ~Pavlovsky, I.\,L. ~Vasiliev
+	\paper On h-holomorphy and h-analyticity of functions of an h-complex variable
+	\jour Bulletin of Gumilyov LN Eurasian National University. Mathematics. Computer Science. Mechanics Series
+	\yr 2020
+	\vol 4
+	\pages 19--27
+	\crossref{http://dx.doi.org/10.32523/2616-7182/2020-133-4-19-27}
+	
+	\RBibitem{8}
+	\by Б.\,В. ~Шабат
+	\book Введение в комплексный анализ. Часть 1. Функции одного переменного
+	\publaddr Москва
+	\publ  Ленанд
+	\yr  2015
+	\vol 5
+	\pages 336
 	
 \end{thebibliography}
