@@ -15,9 +15,6 @@ def main():
             publaddr = info[0]
             publ = info[1]
             year = info[2]
-            other = line[4][1:].replace(",", ".").split('.')          
-            total = other[0]
-            totalpages = other[1][1:].replace(" p", "").replace(" с", "")
             with open("/home/vladaf/Документы/Python/References/static/output.txt", "a") as file:
                 file.write(
                     f"\n\t\\RBibitem{{{rbibitem}}}\n\t"
@@ -46,8 +43,19 @@ def main():
                     f"\\publaddr {publaddr}\n\t"
                     f"\\publ {publ}\n\t"
                     f"\\yr {year}\n\t"
-                    f"\\totalpages {total}+{totalpages}\n\t"
                 )
+                if line[4].find(",")>=0:
+                    other = line[4][1:].replace(",", ".").split('.')          
+                    total = other[0]
+                    totalpages = other[1][1:].replace(" p", "").replace(" с", "")
+                    file.write(
+                        f"\\totalpages {total}+{totalpages}\n\t"
+                    )
+                else:
+                    totalpages = line[4][1:].replace(" p", "").replace(" с", "")
+                    file.write(
+                        f"\\totalpages {totalpages}\n\t"
+                    )
                 if i.find("(")>=0:
                     left_id = i.find("(")+1
                     right_id = i.find(")")
