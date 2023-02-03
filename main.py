@@ -6,18 +6,18 @@ def main():
         file.write("\\begin{thebibliography}{99}\n")
         file.close()
     for i in masF:
-        line = i.replace(" //", ".").replace(". Vol. ", ";").replace(". Т. ", ";").replace(". P. ", ":").replace(". С. ", ":").replace("&", "and").split(".")
+        line = i.replace(" //", ".").replace(". Vol. ", ";").replace(". Т. ", ";").replace(". P. ", ":").replace(". С. ", ":").replace("&", "and").replace("Ⅹ", "X").replace("Ⅰ", "I").replace("Ⅴ", "V").split(".")
         rbibitem = line[0]
         author = line[1].split(',')
-        if line[3].find(";")>=0:
+        if line[3].find(";")>=0:                                    #книга
             book = line[2][1:].replace(";", ".")
             info = line[3][1:].replace(":", ".").replace(";", ".").split('.')
             publaddr = info[0]
             publ = info[1]
             year = info[2]
             other = line[4][1:].replace(",", ".").split('.')          
-            vol = other[0]
-            pages = other[1][1:].replace(" p", "").replace(" с", "")
+            total = other[0]
+            totalpages = other[1][1:].replace(" p", "").replace(" с", "")
             with open("/home/vladaf/Документы/Python/References/static/output.txt", "a") as file:
                 file.write(
                     f"\n\t\\RBibitem{{{rbibitem}}}\n\t"
@@ -46,19 +46,28 @@ def main():
                     f"\\publaddr {publaddr}\n\t"
                     f"\\publ {publ}\n\t"
                     f"\\yr {year}\n\t"
-                    f"\\vol {vol}\n\t"
-                    f"\\pages {pages}\n\t"
+                    f"\\totalpages {total}+{totalpages}\n\t"
                 )
+                if i.find("(")>=0:
+                    left_id = i.find("(")+1
+                    right_id = i.find(")")
+                    serial_vol = i[left_id:right_id].split(';')
+                    serial = serial_vol[0]
+                    vol = serial_vol[1][8:]
+                    file.write(
+                        f"\\serial {serial}\n\t"
+                        f"\\vol {vol}\n\t"
+                    )
                 if i.find("DOI:")>=0:
                     doi_id = i.find("DOI:")+5
                     doi = i[doi_id:-1]
                     file.write(
-                    f"\crossref{{http://dx.doi.org/{doi}}}\n\t"
+                        f"\crossref{{http://dx.doi.org/{doi}}}\n\t"
                     )
                 file.close()
-        elif line[3].find("В:")>=0 or line[3].find("In:")>=0:
-            book = line[2][1:].replace(";", ".")
-            jour = line[3][1:].replace("В: ", "").replace("In: ", "").replace(":", ".")
+        elif line[3].find("В:")>=0 or line[3].find("In:")>=0:       #конференция
+            paper = line[2][1:].replace(";", ".")
+            inbook = line[3][1:].replace("В: ", "").replace("In: ", "").replace(":", ".")
             info = line[4][1:].replace(":", ".").replace(";", ".").split('.')
             publaddr = info[0]
             publ = info[1]
@@ -90,8 +99,8 @@ def main():
                             ", "
                         )
                 file.write(
-                    f"\n\t\\book {book}\n\t"
-                    f"\\jour {jour}\n\t"
+                    f"\n\t\\paper {paper}\n\t"
+                    f"\\inbook {inbook}\n\t"
                     f"\\publaddr {publaddr}\n\t"
                     f"\\publ {publ}\n\t"
                     f"\\yr {year}\n\t"
@@ -102,10 +111,10 @@ def main():
                     doi_id = i.find("DOI:")+5
                     doi = i[doi_id:-1]
                     file.write(
-                    f"\crossref{{http://dx.doi.org/{doi}}}\n\t"
+                        f"\crossref{{http://dx.doi.org/{doi}}}\n\t"
                     )
                 file.close()
-        else:
+        else:                                                       #статья
             paper = line[2][1:].replace(";", ".")
             jour = line[3][1:].replace(":", ".")
             other = line[4][1:].replace(":", ".").replace(";", ".").split('.')
@@ -160,7 +169,7 @@ def main():
                     doi_id = i.find("DOI:")+5
                     doi = i[doi_id:-1]
                     file.write(
-                    f"\crossref{{http://dx.doi.org/{doi}}}\n\t"
+                        f"\crossref{{http://dx.doi.org/{doi}}}\n\t"
                     )
                 file.close()
     with open("/home/vladaf/Документы/Python/References/static/output.txt", "a") as file:
