@@ -9,12 +9,12 @@ def main():
         line = i.replace(" //", ".").replace(". Vol. ", ";").replace(". Т. ", ";").replace(". P. ", ":").replace(". С. ", ":").replace("&", "and").replace("Ⅹ", "X").replace("Ⅰ", "I").replace("Ⅴ", "V").split(".")
         rbibitem = line[0]
         author = line[1].split(',')
-        if line[3].find(";")>=0:                                    #книга
+        if line[3].find(";")>=0:                                    #книга         8. Gantmacher FR. The theory of matrices. Moscow: Nauka; 1967. (Lecture Notes in Computer Science; volume 263). DOI: 10.1007/3-540-47721-7_19.
             book = line[2][1:].replace(";", ".")
             info = line[3][1:].replace(":", ".").replace(";", ".").split('.')
             publaddr = info[0]
             publ = info[1]
-            year = info[2]
+            year = info[2][1:]
             with open("/home/vladaf/Документы/Python/References/static/output.txt", "a") as file:
                 file.write(
                     f"\n\t\\RBibitem{{{rbibitem}}}\n\t"
@@ -73,13 +73,13 @@ def main():
                         f"\crossref{{http://dx.doi.org/{doi}}}\n\t"
                     )
                 file.close()
-        elif line[3].find("В:")>=0 or line[3].find("In:")>=0:       #конференция
+        elif line[3].find("В:")>=0 or line[3].find("In:")>=0:       #конференция   2. Bethencourt JB, Sahai AC, Waters BG. Ciphertext-policy attribute-based encryption. In: Proceedings of 2007 IEEE Symposium on Security and Privacy (Berkeley, California, USA). Los Alamitos, California: IEEE Computer Society; 2007. 321–334.
             paper = line[2][1:].replace(";", ".")
             inbook = line[3][1:].replace("В: ", "").replace("In: ", "").replace(":", ".")
             info = line[4][1:].replace(":", ".").replace(";", ".").split('.')
             publaddr = info[0]
             publ = info[1]
-            year = info[2]
+            year = info[2][1:]
             other = line[5][1:].replace(",", ".").split('.')          
             vol = other[0]
             pages = other[1][1:].replace(" p", "").replace(" с", "")
@@ -115,6 +115,14 @@ def main():
                     f"\\vol {vol}\n\t"
                     f"\\pages {pages}\n\t".replace("–", "--")
                 )
+                if i.find("(")>=0:
+                    left_id = i.find("(")+1
+                    right_id = i.find(")")
+                    serial_vol = i[left_id:right_id].split(';')
+                    serial = serial_vol[0]
+                    file.write(
+                        f"\\serial {serial}\n\t"
+                    )
                 if i.find("DOI:")>=0:
                     doi_id = i.find("DOI:")+5
                     doi = i[doi_id:-1]
@@ -122,7 +130,7 @@ def main():
                         f"\crossref{{http://dx.doi.org/{doi}}}\n\t"
                     )
                 file.close()
-        else:                                                       #статья
+        else:                                                       #статья        6. Galibus TV. Verification of modular secret sharing over a binary field. Vestnik Brestskogo gosudarstvennogo tekhnicheskogouniversiteta: Seriya 1, Fizika, matematika, informatika. 2014;5:26–27.
             paper = line[2][1:].replace(";", ".")
             jour = line[3][1:].replace(":", ".")
             other = line[4][1:].replace(":", ".").replace(";", ".").split('.')
@@ -173,6 +181,14 @@ def main():
                     f"\\vol {vol}\n\t"
                     f"\\pages {pages}\n\t"
                 )
+                if i.find("(")>=0:
+                    left_id = i.find("(")+1
+                    right_id = i.find(")")
+                    serial_vol = i[left_id:right_id].split(';')
+                    serial = serial_vol[0]
+                    file.write(
+                        f"\\serial {serial}\n\t"
+                    )
                 if i.find("DOI:")>=0:
                     doi_id = i.find("DOI:")+5
                     doi = i[doi_id:-1]
