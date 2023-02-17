@@ -6,7 +6,7 @@ def main():
         file.write("\\begin{thebibliography}{99}\n")
         file.close()
     for i in masF:
-        line = i.replace(" //", ".").replace(". Vol. ", ";").replace(". № ", "(").replace(". Т. ", ";").replace(". P. ", ":").replace(". С. ", ":").replace("&", "and").replace("Ⅹ", "X").replace("Ⅰ", "I").replace("Ⅴ", "V").split(".")
+        line = i.replace(" //", ".").replace(". Vol. ", ";").replace(". № ", "(").replace(". Т. ", ";").replace(". P. ", ":").replace(". С. ", ":").replace("&", "and").replace("ё", "e").replace("Ⅹ", "X").replace("Ⅰ", "I").replace("Ⅴ", "V").split(".")
         rbibitem = line[0]
         author = line[1].split(',')
         if line[3].find(";")>=0:                                    #книга         8. Gantmacher FR. The theory of matrices. Moscow: Nauka; 1967. 3, 236. (Lecture Notes in Computer Science; volume 263). DOI: 10.1007/3-540-47721-7_19.
